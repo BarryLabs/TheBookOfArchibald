@@ -1,4 +1,4 @@
-# The Book of Archibald
+import random
 
 # The Tome
 quotes = [
@@ -9,17 +9,12 @@ quotes = [
 ]
 
 def read_quote():
-  # Choose a random quote from the list
   quote = quotes[random.randint(0, len(quotes)-1)]
-
-  # Print the quote
   print(quote)
 
 def add_quote(new_quote):
   # Add the new quote to the tome
   quotes.append(new_quote)
-
-  # Print a confirmation
   print("Quote added:", new_quote)
 
 # Function
@@ -38,10 +33,7 @@ def main():
   elif choice.lower() == "a":
     new_quote = input("Enter the quote: ")
     add_quote(new_quote)
-
-  # If the user entered an invalid choice, print an error message
   else:
     print("Invalid choice. Please try again.")
 
-# Run
 main()
